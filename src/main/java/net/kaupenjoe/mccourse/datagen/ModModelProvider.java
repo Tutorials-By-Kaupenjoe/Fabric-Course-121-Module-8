@@ -6,7 +6,11 @@ import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
+import net.minecraft.util.Identifier;
+
+import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -46,5 +50,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CHAINSAW, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRAWBERRY, Models.GENERATED);
         itemModelGenerator.register(ModItems.STARLIGHT_ASHES, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.DODO_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
     }
 }

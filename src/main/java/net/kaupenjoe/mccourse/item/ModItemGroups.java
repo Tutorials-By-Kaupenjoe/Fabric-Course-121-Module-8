@@ -22,6 +22,7 @@ public class ModItemGroups {
                         entries.add(ModItems.STRAWBERRY);
 
                         entries.add(ModItems.STARLIGHT_ASHES);
+                        entries.add(ModItems.DODO_SPAWN_EGG);
 
                     }).build());
 

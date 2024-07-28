@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/crop",
-  "textures": {
-    "crop": "mccourse:block/strawberry_crop_stage3"
-  }
-}
