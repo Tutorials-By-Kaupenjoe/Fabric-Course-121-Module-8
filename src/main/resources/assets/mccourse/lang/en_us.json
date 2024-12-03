@@ -7,6 +7,7 @@
 
   "item.mccourse.dodo_spawn_egg": "Dodo Spawn Egg",
   "item.mccourse.giraffe_spawn_egg": "Giraffe Spawn Egg",
+  "item.mccourse.warturtle_spawn_egg": "Warturtle Spawn Egg",
 
   "item.mccourse.tomahawk": "Tomahawk",
 
@@ -44,5 +45,6 @@
 
   "entity.mccourse.dodo": "Dodo",
   "entity.mccourse.giraffe": "Giraffe",
-  "entity.mccourse.tomahawk": "Tomahawk"
+  "entity.mccourse.tomahawk": "Tomahawk",
+  "entity.mccourse.warturtle": "Warturtle"
 }
