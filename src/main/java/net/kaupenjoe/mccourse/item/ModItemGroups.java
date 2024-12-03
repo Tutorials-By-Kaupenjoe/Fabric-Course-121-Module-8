@@ -23,6 +23,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.STARLIGHT_ASHES);
 
+                        entries.add(ModItems.TOMAHAWK);
+
                         entries.add(ModItems.DODO_SPAWN_EGG);
                         entries.add(ModItems.GIRAFFE_SPAWN_EGG);
 

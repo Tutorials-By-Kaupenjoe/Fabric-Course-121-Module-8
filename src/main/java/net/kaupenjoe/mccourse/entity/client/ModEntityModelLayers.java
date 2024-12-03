@@ -10,4 +10,7 @@ public class ModEntityModelLayers {
 
     public static final EntityModelLayer GIRAFFE =
             new EntityModelLayer(Identifier.of(MCCourseMod.MOD_ID, "giraffe"), "main");
+
+    public static final EntityModelLayer TOMAHAWK =
+            new EntityModelLayer(Identifier.of(MCCourseMod.MOD_ID, "tomahawk"), "main");
 }

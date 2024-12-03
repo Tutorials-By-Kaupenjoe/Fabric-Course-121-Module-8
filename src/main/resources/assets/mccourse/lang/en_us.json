@@ -8,6 +8,9 @@
   "item.mccourse.dodo_spawn_egg": "Dodo Spawn Egg",
   "item.mccourse.giraffe_spawn_egg": "Giraffe Spawn Egg",
 
+  "item.mccourse.tomahawk": "Tomahawk",
+
+
   "block.mccourse.fluorite_block": "Fluorite Block",
 
   "block.mccourse.fluorite_ore": "Fluorite Ore",
@@ -40,5 +43,6 @@
   "tooltip.mccourse.strawberry.tooltip.1": "Tastes great!",
 
   "entity.mccourse.dodo": "Dodo",
-  "entity.mccourse.giraffe": "Giraffe"
+  "entity.mccourse.giraffe": "Giraffe",
+  "entity.mccourse.tomahawk": "Tomahawk"
 }
