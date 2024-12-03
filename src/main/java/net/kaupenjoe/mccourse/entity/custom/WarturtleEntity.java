@@ -6,6 +6,8 @@ import net.kaupenjoe.mccourse.entity.ModEntities;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.item.custom.WarturtleArmorItem;
 import net.kaupenjoe.mccourse.screen.custom.WarturtleScreenHandler;
+import net.minecraft.block.Block;
+import net.minecraft.block.DyedCarpetBlock;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -35,6 +37,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.math.MathHelper;
@@ -63,6 +66,9 @@ public class WarturtleEntity extends TameableEntity implements InventoryChangedL
             DataTracker.registerData(WarturtleEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
     public static final TrackedData<Boolean> HAS_TIER_3_CHEST =
             DataTracker.registerData(WarturtleEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+
+    public static final TrackedData<ItemStack> DYE_STACK =
+            DataTracker.registerData(WarturtleEntity.class, TrackedDataHandlerRegistry.ITEM_STACK);
 
 
     protected SimpleInventory inventory;
@@ -178,6 +184,8 @@ public class WarturtleEntity extends TameableEntity implements InventoryChangedL
         builder.add(HAS_TIER_1_CHEST, false);
         builder.add(HAS_TIER_2_CHEST, false);
         builder.add(HAS_TIER_3_CHEST, false);
+
+        builder.add(DYE_STACK, ItemStack.EMPTY);
     }
 
     @Override
@@ -328,6 +336,13 @@ public class WarturtleEntity extends TameableEntity implements InventoryChangedL
         if(sender.getStack(0).isEmpty() && isWearingBodyArmor()) {
             equipBodyArmor(ItemStack.EMPTY);
         }
+
+        if(!sender.getStack(1).isEmpty()) {
+            this.dataTracker.set(DYE_STACK, sender.getStack(1));
+        }
+        if(sender.getStack(1).isEmpty()) {
+            this.dataTracker.set(DYE_STACK, ItemStack.EMPTY);
+        }
     }
 
     private void dropChestInventory(int slot) {
@@ -451,5 +466,16 @@ public class WarturtleEntity extends TameableEntity implements InventoryChangedL
 
     private boolean canArmorAbsorb(DamageSource damageSource) {
         return this.hasArmorOn() && !damageSource.isIn(DamageTypeTags.BYPASSES_WOLF_ARMOR);
+    }
+
+    @Nullable
+    private static DyeColor getDyeColor(ItemStack stack) {
+        Block block = Block.getBlockFromItem(stack.getItem());
+        return block instanceof DyedCarpetBlock ? ((DyedCarpetBlock)block).getDyeColor() : null;
+    }
+
+    @Nullable
+    public DyeColor getSwag() {
+        return getDyeColor(this.dataTracker.get(DYE_STACK));
     }
 }
