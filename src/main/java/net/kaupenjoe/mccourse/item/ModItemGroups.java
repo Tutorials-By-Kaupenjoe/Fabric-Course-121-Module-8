@@ -25,6 +25,12 @@ public class ModItemGroups {
 
                         entries.add(ModItems.TOMAHAWK);
 
+                        entries.add(ModItems.IRON_WARTURTLE_ARMOR);
+                        entries.add(ModItems.GOLD_WARTURTLE_ARMOR);
+                        entries.add(ModItems.DIAMOND_WARTURTLE_ARMOR);
+                        entries.add(ModItems.NETHERITE_WARTURTLE_ARMOR);
+                        entries.add(ModItems.FLUORITE_WARTURTLE_ARMOR);
+
                         entries.add(ModItems.DODO_SPAWN_EGG);
                         entries.add(ModItems.GIRAFFE_SPAWN_EGG);
                         entries.add(ModItems.WARTURTLE_SPAWN_EGG);

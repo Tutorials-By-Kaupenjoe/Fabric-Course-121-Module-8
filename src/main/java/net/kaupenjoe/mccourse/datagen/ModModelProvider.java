@@ -51,6 +51,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STRAWBERRY, Models.GENERATED);
         itemModelGenerator.register(ModItems.STARLIGHT_ASHES, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.IRON_WARTURTLE_ARMOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GOLD_WARTURTLE_ARMOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DIAMOND_WARTURTLE_ARMOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NETHERITE_WARTURTLE_ARMOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FLUORITE_WARTURTLE_ARMOR, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.DODO_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
         itemModelGenerator.register(ModItems.GIRAFFE_SPAWN_EGG,
