@@ -2,6 +2,7 @@ package net.kaupenjoe.mccourse.entity;
 
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.entity.custom.DodoEntity;
+import net.kaupenjoe.mccourse.entity.custom.GiraffeEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;
@@ -12,6 +13,11 @@ public class ModEntities {
     public static final EntityType<DodoEntity> DODO = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(MCCourseMod.MOD_ID, "dodo"),
             EntityType.Builder.create(DodoEntity::new, SpawnGroup.CREATURE).dimensions(1f, 2.5f).build());
+
+    public static final EntityType<GiraffeEntity> GIRAFFE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(MCCourseMod.MOD_ID, "giraffe"),
+            EntityType.Builder.create(GiraffeEntity::new, SpawnGroup.CREATURE).dimensions(1.5f, 2.5f).build());
+
 
     public static void registerModEntities() {
         MCCourseMod.LOGGER.info("Registering Mod Entities for " + MCCourseMod.MOD_ID);

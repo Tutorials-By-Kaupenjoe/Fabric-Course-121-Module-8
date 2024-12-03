@@ -7,4 +7,7 @@ import net.minecraft.util.Identifier;
 public class ModEntityModelLayers {
     public static final EntityModelLayer DODO =
             new EntityModelLayer(Identifier.of(MCCourseMod.MOD_ID, "dodo"), "main");
+
+    public static final EntityModelLayer GIRAFFE =
+            new EntityModelLayer(Identifier.of(MCCourseMod.MOD_ID, "giraffe"), "main");
 }

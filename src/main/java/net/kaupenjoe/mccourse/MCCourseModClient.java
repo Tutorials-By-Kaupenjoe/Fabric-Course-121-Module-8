@@ -6,9 +6,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.entity.ModEntities;
-import net.kaupenjoe.mccourse.entity.client.DodoModel;
-import net.kaupenjoe.mccourse.entity.client.DodoRenderer;
-import net.kaupenjoe.mccourse.entity.client.ModEntityModelLayers;
+import net.kaupenjoe.mccourse.entity.client.*;
 import net.minecraft.client.render.RenderLayer;
 
 public class MCCourseModClient implements ClientModInitializer {
@@ -19,5 +17,8 @@ public class MCCourseModClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.DODO, DodoModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.DODO, DodoRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.GIRAFFE, GiraffeModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.GIRAFFE, GiraffeRenderer::new);
     }
 }

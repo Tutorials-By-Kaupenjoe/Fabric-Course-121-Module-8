@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.entity.ModEntities;
 import net.kaupenjoe.mccourse.entity.custom.DodoEntity;
+import net.kaupenjoe.mccourse.entity.custom.GiraffeEntity;
 import net.kaupenjoe.mccourse.item.ModItemGroups;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.worldgen.ModEntitySpawns;
@@ -29,6 +30,7 @@ public class MCCourseMod implements ModInitializer {
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
 		FabricDefaultAttributeRegistry.register(ModEntities.DODO, DodoEntity.createDodoAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.GIRAFFE, GiraffeEntity.createAttributes());
 
 		ModEntitySpawns.addSpawns();
 	}

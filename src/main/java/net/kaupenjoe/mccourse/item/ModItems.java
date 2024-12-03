@@ -35,6 +35,8 @@ public class ModItems {
 
     public static final Item DODO_SPAWN_EGG = registerItem("dodo_spawn_egg",
             new SpawnEggItem(ModEntities.DODO, 0x465ae0, 0x545978, new Item.Settings()));
+    public static final Item GIRAFFE_SPAWN_EGG = registerItem("giraffe_spawn_egg",
+            new SpawnEggItem(ModEntities.GIRAFFE, 0xe7d7a5, 0x7e5b41, new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {
